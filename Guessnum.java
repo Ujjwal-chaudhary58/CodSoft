@@ -26,8 +26,9 @@ class Game{
 
         System.out.println("Guess the number");
 
-        Scanner sc = new Scanner(System.in);
-        inputNumber = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            inputNumber = sc.nextInt();
+        }
     }
 
     boolean isCorrectNumber(){
